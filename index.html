@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Converter</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div class="navimg">
+          <img src="./Bitches-logo-crt.png" alt="logo" srcset="" class="logo" />
+        </div>
+        <div class="nav-text">Text Translator</div>
+      </nav>
+      <div class="container">
+        <div class="heading">
+          <div class="source-lang">
+            <div class="langTextS">English </div>
+            <button onclick="sourceBtn()" class="sourcebutton">
+              <img src="./right-arrow.png" alt="" class="arrow" />
+            </button>
+          </div>
+          
+          <div class="convertDiv">
+            <button class="convertBtn" onclick="convertLang()">
+              <div class="rotate">
+                <img src="./exchange.png" class="convert" alt="" srcset="" />
+              </div>
+              <h2>Convert</h2>
+            </button>
+          </div>
+          <div class="result">
+            <div class="langTextR">Hindi </div>
+            <button onclick="sourceBtn()" class="resultBtn">
+              <img src="./right-arrow.png" alt="" class="arrow" />
+            </button>
+          </div>
+        </div>
+        
+        
+        <div class="content">
+          <div class="sourceDiv">
+            <textarea
+              type="text"
+              name="text"
+              id=""
+              class="input"
+              placeholder="Type to translate"
+            >
+Hello Everyone</textarea
+            >
+          </div>
+          <div class="destinationDiv">
+            <textarea
+              type="text"
+              name="destination"
+              id=""
+              readonly
+              class="destination"
+            ></textarea>
+          </div>
+        </div>
+        <div class="sourceBoard hide">
+          <div>
+            <button onclick="assign(1)">Afrikaans af</button>
+          </div>
+          <div>
+            <button onclick="assign(2)">Albanian sq</button>
+          </div>
+          <div>
+            <button onclick="assign(3)">Amharic am</button>
+          </div>
+          <div>
+            <button onclick="assign(4)">Arabic ar</button>
+          </div>
+          <div>
+            <button onclick="assign(5)">Armenian hy</button>
+          </div>
+          <div>
+            <button onclick="assign(6)">Azerbaijani az</button>
+          </div>
+          <div>
+            <button onclick="assign(7)">Basque eu</button>
+          </div>
+          <div>
+            <button onclick="assign(8)">Belarusian be</button>
+          </div>
+          <div>
+            <button onclick="assign(9)">Bengali bn</button>
+          </div>
+          <div>
+            <button onclick="assign(10)">Bosnian bs</button>
+          </div>
+          <div>
+            <button onclick="assign(11)">Bulgarian bg</button>
+          </div>
+          <div>
+            <button onclick="assign(12)">Catalan ca</button>
+          </div>
+          <div>
+            <button onclick="assign(13)">Cebuano ceb</button>
+          </div>
+          <div>
+            <button onclick="assign(14)">Chichewa ny</button>
+          </div>
+          <div>
+            <button onclick="assign(15)">Chinese (Simplified) zh-CN</button>
+          </div>
+          <div>
+            <button onclick="assign(16)">Chinese (Traditional) zh-TW</button>
+          </div>
+          <div>
+            <button onclick="assign(17)">Corsican co</button>
+          </div>
+          <div>
+            <button onclick="assign(18)">Croatian hr</button>
+          </div>
+          <div>
+            <button onclick="assign(19)">Czech cs</button>
+          </div>
+          <div>
+            <button onclick="assign(20)">Danish da</button>
+          </div>
+          <div>
+            <button onclick="assign(21)">Dutch nl</button>
+          </div>
+          <div>
+            <button onclick="assign(22)">English en</button>
+          </div>
+          <div>
+            <button onclick="assign(23)">Esperanto eo</button>
+          </div>
+          <div>
+            <button onclick="assign(24)">Estonian et</button>
+          </div>
+          <div>
+            <button onclick="assign(25)">Filipino tl</button>
+          </div>
+          <div>
+            <button onclick="assign(26)">Finnish fi</button>
+          </div>
+          <div>
+            <button onclick="assign(27)">French fr</button>
+          </div>
+          <div>
+            <button onclick="assign(28)">Frisian fy</button>
+          </div>
+          <div>
+            <button onclick="assign(29)">Galician gl</button>
+          </div>
+          <div>
+            <button onclick="assign(30)">Georgian ka</button>
+          </div>
+          <div>
+            <button onclick="assign(31)">German de</button>
+          </div>
+          <div>
+            <button onclick="assign(32)">Greek el</button>
+          </div>
+          <div>
+            <button onclick="assign(33)">Gujarati gu</button>
+          </div>
+          <div>
+            <button onclick="assign(34)">Haitian Creole ht</button>
+          </div>
+          <div>
+            <button onclick="assign(35)">Hausa ha</button>
+          </div>
+          <div>
+            <button onclick="assign(36)">Hawaiian haw</button>
+          </div>
+          
+            <div>
+              <button onclick="assign(37)">Hebrew iw</button>
+            </div>
+            <div>
+              <button onclick="assign(38)">Hindi hi</button>
+            </div>
+            <div>
+              <button onclick="assign(39)">Hmong hmn</button>
+            </div>
+            <div>
+              <button onclick="assign(40)">Hungarian hu</button>
+            </div>
+            <div>
+              <button onclick="assign(41)">Icelandic is</button>
+            </div>
+            <div>
+              <button onclick="assign(42)">Igbo ig</button>
+            </div>
+            <div>
+              <button onclick="assign(43)">Indonesian id</button>
+            </div>
+            <div>
+              <button onclick="assign(44)">Irish ga</button>
+            </div>
+            <div>
+              <button onclick="assign(45)">Italian it</button>
+            </div>
+            <div>
+              <button onclick="assign(46)">Japanese ja</button>
+            </div>
+            <div>
+              <button onclick="assign(47)">Javanese jw</button>
+            </div>
+            <div>
+              <button onclick="assign(48)">Kannada kn</button>
+            </div>
+            <div>
+              <button onclick="assign(49)">Kazakh kk</button>
+            </div>
+            <div>
+              <button onclick="assign(50)">Khmer km</button>
+            </div>
+            <div>
+              <button onclick="assign(51)">Kinyarwanda rw</button>
+            </div>
+            <div>
+              <button onclick="assign(52)">Korean ko</button>
+            </div>
+            <div>
+              <button onclick="assign(53)">Kurdish (Kurmanji) ku</button>
+            </div>
+            <div>
+              <button onclick="assign(54)">Kyrgyz ky</button>
+            </div>
+            <div>
+              <button onclick="assign(55)">Lao lo</button>
+            </div>
+            <div>
+              <button onclick="assign(56)">Latin la</button>
+            </div>
+            <div>
+              <button onclick="assign(57)">Latvian lv</button>
+            </div>
+            <div>
+              <button onclick="assign(58)">Lithuanian lt</button>
+            </div>
+            <div>
+              <button onclick="assign(59)">Luxembourgish lb</button>
+            </div>
+            <div>
+              <button onclick="assign(60)">Macedonian mk</button>
+            </div>
+            <div>
+              <button onclick="assign(61)">Malagasy mg</button>
+            </div>
+            <div>
+              <button onclick="assign(62)">Malay ms</button>
+            </div>
+            <div>
+              <button onclick="assign(63)">Malayalam ml</button>
+            </div>
+            <div>
+              <button onclick="assign(64)">Maltese mt</button>
+            </div>
+            <div>
+              <button onclick="assign(65)">Maori mi</button>
+            </div>
+            <div>
+              <button onclick="assign(66)">Marathi mr</button>
+            </div>
+            <div>
+              <button onclick="assign(67)">Mongolian mn</button>
+            </div>
+            <div>
+              <button onclick="assign(68)">Myanmar (Burmese) my</button>
+            </div>
+            <div>
+              <button onclick="assign(69)">Nepali ne</button>
+            </div>
+            <div>
+              <button onclick="assign(70)">Norwegian no</button>
+            </div>
+            
+            <div>
+              <button onclick="assign(71)">Odia (Oriya) or</button>
+            </div>
+            <div>
+              <button onclick="assign(72)">Pashto ps</button>
+            </div>
+            <div>
+              <button onclick="assign(73)">Persian fa</button>
+            </div>
+            <div>
+              <button onclick="assign(74)">Polish pl</button>
+            </div>
+            <div>
+              <button onclick="assign(75)">Portuguese pt</button>
+            </div>
+            <div>
+              <button onclick="assign(76)">Punjabi pa</button>
+            </div>
+            <div>
+              <button onclick="assign(77)">Romanian ro</button>
+            </div>
+            <div>
+              <button onclick="assign(78)">Russian ru</button>
+            </div>
+            <div>
+              <button onclick="assign(79)">Samoan sm</button>
+            </div>
+            <div>
+              <button onclick="assign(80)">Scots Gaelic gd</button>
+            </div>
+            <div>
+              <button onclick="assign(81)">Serbian sr</button>
+            </div>
+            <div>
+              <button onclick="assign(82)">Sesotho st</button>
+            </div>
+            <div>
+              <button onclick="assign(83)">Shona sn</button>
+            </div>
+            <div>
+              <button onclick="assign(84)">Sindhi sd</button>
+            </div>
+            <div>
+              <button onclick="assign(85)">Sinhala si</button>
+            </div>
+            <div>
+              <button onclick="assign(86)">Slovak sk</button>
+            </div>
+            <div>
+              <button onclick="assign(87)">Slovenian sl</button>
+            </div>
+            <div>
+              <button onclick="assign(88)">Somali so</button>
+            </div>
+            <div>
+              <button onclick="assign(89)">Spanish es</button>
+            </div>
+            <div>
+              <button onclick="assign(90)">Sundanese su</button>
+            </div>
+            <div>
+              <button onclick="assign(91)">Swahili sw</button>
+            </div>
+            <div>
+              <button onclick="assign(92)">Swedish sv</button>
+            </div>
+            <div>
+              <button onclick="assign(93)">Tajik tg</button>
+            </div>
+            <div>
+              <button onclick="assign(94)">Tamil ta</button>
+            </div>
+            <div>
+              <button onclick="assign(95)">Tatar tt</button>
+            </div>
+            <div>
+              <button onclick="assign(96)">Telugu te</button>
+            </div>
+            <div>
+              <button onclick="assign(97)">Thai th</button>
+            </div>
+            <div>
+              <button onclick="assign(98)">Turkish</button>
+            </div>
+            <div>
+              <button onclick="assign(99)">Turkmen</button>
+            </div>
+            <div>
+              <button onclick="assign(100)">Ukrainian</button>
+            </div>
+            
+            <div>
+              <button onclick="assign(101)">Urdu</button>
+            </div>
+            <div>
+              <button onclick="assign(102)">Uyghur</button>
+            </div>
+            <div>
+              <button onclick="assign(103)">Uzbek</button>
+            </div>
+            <div>
+              <button onclick="assign(104)">Vietnamese</button>
+            </div>
+            <div>
+              <button onclick="assign(105)">Welsh</button>
+            </div>
+            <div>
+              <button onclick="assign(106)">Xhosa</button>
+            </div>
+            <div>
+              <button onclick="assign(107)">Yiddish</button>
+            </div>
+            <div>
+              <button onclick="assign(108)">Yoruba</button>
+            </div>
+            <div>
+              <button onclick="assign(109)">Zulu</button>
+            </div>
+            <div>
+              <button onclick="assign(110)">Hebrew</button>
+            </div>
+            </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
